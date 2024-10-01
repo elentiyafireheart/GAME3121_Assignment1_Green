@@ -5,21 +5,19 @@ using UnityEngine;
 public class FollowPlayerX : MonoBehaviour
 {
     public GameObject plane;
-    private Vector3 offset;
+    public Vector3 offset;
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(15, 2, 1);
-        transform.rotation = Quaternion.Euler(0, -90, 0);
-        offset = transform.position - plane.transform.position;
+       // transform.position = new Vector3(1.77f,1.19f,-1.2f);
+        //transform.rotation = Quaternion.Euler(0, -90, 0);
+       //transform.position = plane.transform.position + offset;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(plane.transform.position.x + offset.x,
-            plane.transform.position.y + offset.y,
-            plane.transform.position.z + offset.x);
+        transform.position = plane.transform.position + offset;
     }
 }
