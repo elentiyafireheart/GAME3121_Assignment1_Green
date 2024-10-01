@@ -17,11 +17,9 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Instantiate(dogPrefab, transform.position, dogPrefab.transform.rotation);
-                elapsedTime = 0
+                elapsedTime = 0;
             }
         }
     }
-
-        // On spacebar press, send dog
      
 }
