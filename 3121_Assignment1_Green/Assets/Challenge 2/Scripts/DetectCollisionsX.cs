@@ -11,7 +11,7 @@ public class DetectCollisionsX : MonoBehaviour
         if (other.gameObject.CompareTag("Dog"))
         {
             Destroy(gameObject);
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
         }
     }
 }
