@@ -5,14 +5,23 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject dogPrefab;
+    public float aDelay;
+    private float elapsedTime;
 
     // Update is called once per frame
     void Update()
     {
-        // On spacebar press, send dog
-        if (Input.GetKeyDown(KeyCode.Space))
+        elapsedTime += Time.deltaTime;
+        if (elapsedTime > aDelay)
         {
-            Instantiate(dogPrefab, transform.position, dogPrefab.transform.rotation);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Instantiate(dogPrefab, transform.position, dogPrefab.transform.rotation);
+                elapsedTime = 0
+            }
         }
     }
+
+        // On spacebar press, send dog
+     
 }
